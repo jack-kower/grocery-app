@@ -2,8 +2,35 @@
 {%include 'base.html'%}
 {%block content%}
 
+<style>
+    .list{
+        padding-top: 2rem;
+    }
+</style>
 
 
+<div  class="list">
+    <table>
+        <tr>
+            <th style="padding-right:15rem;">Item Name</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>
+                {%for list in list%}
+                <h4>{{list.item_name}}</h4>
+                {{list.item_price}}
+                {%endfor%}
+            </td>
+            <td>
+                {%for price in price%}
+                {{price}}
+                {%endfor%}    
+            </td>
+        </tr>
+    </table>
+
+</div>
 
 
 
